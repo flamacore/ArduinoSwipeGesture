@@ -41,7 +41,7 @@ pinMode(ledDown, OUTPUT);
   for (uint8_t i = 1; i < SONAR_NUM; i++)
     pingTimer[i] = pingTimer[i - 1] + PING_INTERVAL;
 }
- 
+
 void loop() {
   for (uint8_t i = 0; i < SONAR_NUM; i++) {
     if (millis() >= pingTimer[i]) {
